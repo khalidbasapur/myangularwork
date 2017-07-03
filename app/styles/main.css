@@ -1,0 +1,96 @@
+
+body {
+  padding: 0;
+  background-color: #dfeaea;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+}
+
+/* Custom Panel */
+.panel {
+  margin-top:15px;
+}
+
+
+/* Custom page footer */
+.footer {
+  background-color: black;
+  color: white;
+  border-top: 1px solid black;
+}
+
+.image-block {
+  height: 100px;
+  width: 100%;
+}
+
+.copyright {
+  padding-top: 5px;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+.tree-div {
+  height: 77.5vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-right: 1px solid #0F0F0F; 
+}
+
+.no-right-margin-row {
+  margin-right: 0px !important;
+}
+
+.footer-form {
+  padding-bottom: 5px;
+}
+
+.product-row {
+  height: 77.5vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.cart-modal {
+    padding: 10px;
+    background-color: #deeaec;
+    border: 1px solid;
+}
+
+.cart-header {
+  color:#0F0F0F;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 750px;
+    background-color: hsla(188, 82%, 59%, 0.8);
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .navbar {
+    border-radius: 0px;
+  }
+}
