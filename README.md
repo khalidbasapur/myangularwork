@@ -5,6 +5,12 @@ version 0.16.0.
 
 ## Build & development
 
+Clone project from 'https://github.com/khalidbasapur/myangularwork.git'
+
+Run 'npm install'
+
+Run 'bower install'
+
 Run `grunt` for building and `grunt serve` for preview.
 
 ## Testing
