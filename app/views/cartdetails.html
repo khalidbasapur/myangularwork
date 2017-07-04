@@ -1,0 +1,53 @@
+<div class="container-fluid cart-modal">
+  <div class="row cart-header">
+    <div class="col-sm-11">
+      <span>Your Cart Detiails Guest</span>
+    </div>
+    <div class="col-sm-1" style="padding-right:0px !important;">
+      <span class="glyphicon glyphicon-remove pull-right" ng-click="vm.close();"></span>
+    </div>
+  </div>
+  <hr class="hr-class">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="table table-responsive table-bordered cart-table">
+        <table class="table">
+          <caption>Selected Products</caption>
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="cart in vm.cartItems">
+              <td><img src="{{cart.imgUrl}}" class="img-responsive cart-image"></td>
+              <td><span>{{cart.price}}</span></td>
+              <td><input type="text" name="quantity" ng-model="cart.quantity"></td>
+              <td>{{cart.price * cart.quantity}}</td>
+              <td>
+                <span class="glyphicon glyphicon-trash" ng-click="vm.cartItems.splice($index,1);$root.cartItems.splice($index, 1);"></span>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3">
+                <span class="pull-right" style="padding-left: 10px;"><strong>AED</strong></span>
+                <span class="pull-right"><strong>Total</strong></span>
+              </td>
+              <td>{{vm.getCartTotal()}}</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <button type="button" class="btn btn-primary pull-right">PROCEED TO CHECKOUT</button>
+    </div>
+  </div>
+</div>

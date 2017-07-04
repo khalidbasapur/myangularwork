@@ -1,13 +1,42 @@
 <div class="container-fluid cart-modal">
-  <div class="row pull-right">
-    <div class="col-sm-12 cart-header">
-      <span class="glyphicon glyphicon-remove" ng-click="vm.close();"></span>
+  <div class="row cart-header">
+    <div class="col-sm-11">
+      <span>{{vm.selectedProduct.name}}</span>
+    </div>
+    <div class="col-sm-1" style="padding-right:0px !important;">
+      <span class="glyphicon glyphicon-remove pull-right" ng-click="vm.close();"></span>
     </div>
   </div>
-  <hr>
+  <hr class="hr-class">
   <div class="row">
-    <div class="col-sm-6">
-      <h2>Test</h2>
+    <div class="col-sm-4">
+      <div class="row">
+          <div class="col-sm-12">
+            <img src="{{vm.selectedProduct.imgUrl}}" alt="{{vm.selectedProduct.price}}">
+          </div>
+      </div>
+    </div>
+    <div class="col-sm-5">
+      <div class="row">
+        <div class="col-sm-12">
+          <span><strong>{{vm.selectedProduct.price}}</strong></span>
+          <span>{{vm.selectedProduct.currency}}</span>
+        </div>
+        <div class="col-sm-12">
+          <span><strong>Brand:</strong></span>
+          <span>{{vm.selectedProduct.brand}}</span>
+        </div>
+        <div class="col-sm-12">
+          <span>{{vm.selectedProduct.longDesc}}</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="row">
+        <div class="col-xs-12">
+          <button type="button" class="btn btn-primary pull-right" ng-click="vm.onAddToCart();">ADD TO CART</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

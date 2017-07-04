@@ -38,7 +38,9 @@ angular
                     abstract: false,
                     views : {
                     	"nav@main" : {
-                    		templateUrl : "views/nav.html"
+                    		templateUrl : "views/nav.html",
+                    		controller : "NavController",
+                    		controllerAs: "vm"
                     	},
                     	"content@main": {
                     		templateUrl : "views/content.html"

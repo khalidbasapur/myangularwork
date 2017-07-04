@@ -18,7 +18,13 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Login</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+        <li>
+          <button type="button" ng-click="vm.showCartDetails();" class="btn btn-link cart-button">
+            <span class="glyphicon glyphicon-shopping-cart"></span>
+            <span>Cart</span>
+            <span class="badge" ng-if="$root.cartItems.length > 0">{{$root.cartItems.length}}</span>
+          </div>
+        </li>
       </ul>
     </div>
   </div>

@@ -7,9 +7,12 @@
 
     function CommonService($http) {
         var selectedCategory = {};
+        var cartItems = [];
         return {
             setSelectedCategory:setSelectedCategory,
-            getSelectedCategory:getSelectedCategory
+            getSelectedCategory:getSelectedCategory,
+            setCartItems:setCartItems,
+            getCartItems:getCartItems
         }
 
         function setSelectedCategory(category) {
@@ -19,7 +22,14 @@
         function getSelectedCategory() {
             return this.selectedCategory;  
         }
+
+        function setCartItems(cartItem) {
+            cartItems.push(cartItem);
+        }
         
+        function getCartItems() {
+            return cartItems;
+        }
 
     }
 })();
